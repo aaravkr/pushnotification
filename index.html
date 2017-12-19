@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simply Notify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <main>
+      <header>
+        <h1>Simply Notify</h1>
+        <p><em>A simple application to send notifications to everyone subscribed. It's simple. It's useless. It's simply notify.</em></p>
+      </header>
+      
+      <!-- Content goes here -->
+        <button id="sign-in">sign in</button>
+         <button id="sign-out" hidden>sign out</button>
+        <button id="Subscribe" hidden>subscribe</button>
+        <button id="Unsubscribe" hidden >unsubscribe</button>
+         <form id="send-notification-form" >
+        <label class="sr-only" for="notification-message">Notification Message</label>
+        <div>
+          <textarea id="notification-message" maxlength="40" placeholder="What would you like to say?"></textarea>
+          <button type="submit" id="send-notification" aria-label="Send">
+            <img src="/img/send.png" alt="">
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <small><a href="">View Source</a></small>
+    </footer>
+  </div>
+
+  <!-- Firebase SDK -->
+  
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC2fxxSNzdSIjylEBzHx_qTSdzQaiVrXXw",
+    authDomain: "shimlaweb-e82b1.firebaseapp.com",
+    databaseURL: "https://shimlaweb-e82b1.firebaseio.com",
+    projectId: "shimlaweb-e82b1",
+    storageBucket: "shimlaweb-e82b1.appspot.com",
+    messagingSenderId: "898950325895"
+  };
+  firebase.initializeApp(config);
+</script>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
